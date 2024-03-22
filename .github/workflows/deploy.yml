@@ -104,8 +104,8 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Run end-to-end tests
-        run: npm run test:e2e
+      - name: Cypress run
+        uses: cypress-io/github-action@v6
 
   deploy:
     runs-on: ubuntu-latest
