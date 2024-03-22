@@ -104,8 +104,13 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Run Cypress tests
-        run: npm run test:e2e
+      - name: Cypress run
+        uses: cypress-io/github-action@v6
+        with:
+            build: npm run build
+            start: npm run preview
+            wait-on-timeout: 120
+            wait-on: 'http://localhost:4173'
 
   deploy:
     runs-on: ubuntu-latest
