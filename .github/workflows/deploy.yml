@@ -114,7 +114,6 @@ jobs:
             wait-on-timeout: 120
             record: true
             group: 'E2E Tests'
-            config-file: 'cypress.config.ts'
             tag: ${{ github.sha }}
             browser: chrome
         env:
