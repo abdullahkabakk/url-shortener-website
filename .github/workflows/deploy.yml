@@ -113,7 +113,6 @@ jobs:
             start: npm run dev
             wait-on: 'http://localhost:5173/'
             wait-on-timeout: 120
-            record: true
             group: 'E2E Tests'
             tag: ${{ github.sha }}
             browser: chrome
