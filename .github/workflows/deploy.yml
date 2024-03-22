@@ -107,7 +107,10 @@ jobs:
       - name: Cypress run
         uses: cypress-io/github-action@v6
         with:
-            wait-on: 'http://localhost:4173'
+            project: ./dist
+            build: npm run build
+            start: npm run dev
+            wait-on: 'http://localhost:5173/'
             wait-on-timeout: 120
             record: true
             group: 'E2E Tests'
