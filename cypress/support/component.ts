@@ -20,9 +20,9 @@ import './commands'
 // require('./commands')
 
 // Import global styles
-import '@/assets/main.css'
-
+import '@/index.css'
 import { mount } from 'cypress/vue'
+import '@cypress/code-coverage/support'
 
 // Augment the Cypress namespace to include type definitions for
 // your custom command.
